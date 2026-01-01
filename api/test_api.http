@@ -1,0 +1,16 @@
+### Mengetes Simpan Transaksi Baru
+POST http://localhost:8000/api/transactions
+Content-Type: application/json
+Accept: application/json
+
+{
+    "amount": 75000,
+    "type": "expense",
+    "category": "Modifikasi",
+    "description": "Beli baut body Carbon",
+    "source": "manual"
+}
+
+### Mengetes Ambil Semua Data Transaksi (Kalau sudah buat fungsinya)
+GET http://localhost:8000/api/transactions
+Accept: application/json
