@@ -12,7 +12,7 @@ export default function Dashboard() {
                         <h1 className="text-3xl font-bold tracking-tight">Finance Dashboard</h1>
                         <p className="text-muted-foreground">Overview of your financial stats</p>
                     </div>
-                    <button className="flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2.5 rounded-lg text-sm font-medium transition-colors">
+                    <button className="flex items-center gap-2 bg-primary text-primary-foreground hover:bg-secondary px-6 py-2.5 rounded-lg text-sm font-medium transition-colors">
                         <ScanIcon className="h-4 w-4" />
                         Scan 
                     </button>
