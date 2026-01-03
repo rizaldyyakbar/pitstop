@@ -1,5 +1,5 @@
 import StatsCard from "../components/StatsCard";
-import { ArrowUpIcon, ArrowDownIcon ,DollarSignIcon, ScanIcon, UserCircle2 } from "lucide-react"
+import { ArrowUpIcon, ArrowDownIcon ,DollarSignIcon, ScanIcon } from "lucide-react"
 
 export default function Dashboard() {
     return (
