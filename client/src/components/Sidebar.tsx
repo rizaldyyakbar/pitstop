@@ -40,7 +40,7 @@ export default function Sidebar() {
                     <LogOut className="h-5 w-5" />
                     Logout
                 </button>
-                <div className="justify-between flex items-center gap-2 mx-14 ">
+                <div className="group justify-between flex items-center gap-2 mx-14 ">
                     <button className=" text-small font-normal text-card-foreground pb-1 ">
                         Rizaldy   
                     </button>
