@@ -1,4 +1,4 @@
-import { Home, Receipt, Scan, BrainCircuit, Settings, LogOut, UserCircle2 } from "lucide-react";
+import { Home, Receipt, Scan, BrainCircuit, Settings, LogOut, User } from "lucide-react";
 import { useState } from "react";
 
 export default function Sidebar() {
@@ -40,12 +40,12 @@ export default function Sidebar() {
                     <LogOut className="h-5 w-5" />
                     Logout
                 </button>
-                <div className="justify-between flex items-center gap-2 mx-14 ">
-                    <button className=" text-small font-normal text-card-foreground pb-1 ">
+                <div className="group   justify-between flex items-center gap-2 mx-14 ">
+                    <button className=" text-small font-normal text-muted-foreground pb-1 group-hover:text-white w-full ">
                         Rizaldy   
                     </button>
-                    <button className="flex items-center gap-2 hover:shadow-glow brightness-90">
-                        <UserCircle2 className="h-6 w-6 text-primary" />
+                    <button className="flex items-center gap-2 group-hover:text-white">
+                        <User className="h-8 w-8 rounded-full border border-gray-700 p-1.5 text-gray-400 group-hover:text-white group-hover:border-white transition-colors " strokeWidth={2.0} />
                     </button>
                 </div>
             </div>
