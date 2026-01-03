@@ -1,9 +1,9 @@
 import Dashboard from './pages/Dashboard';
-import Sidebar from './components/sideBar';
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
-    <div className='flex min-h-screen bg-background'>
+    <div className='flex h-screen bg-background overflow-hidden'>
       <Sidebar />
       <main className='flex-1 overflow-y-auto'>
       <Dashboard />

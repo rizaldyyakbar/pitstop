@@ -42,6 +42,7 @@ export default function Sidebar() {
                 </button>
                 <div className="group   justify-between flex items-center gap-2 mx-14 ">
                     <button className=" text-small font-normal text-muted-foreground pb-1 group-hover:text-white w-full ">
+
                         Rizaldy   
                     </button>
                     <button className="flex items-center gap-2 group-hover:text-white">

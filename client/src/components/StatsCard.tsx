@@ -12,7 +12,7 @@ interface StatsCardProps {
 
 const StatsCard: React.FC<StatsCardProps> = ({ title, value, trend, trendColor, icon: Icon, iconColor, periodInfo }) => {    
     return (
-        <div className="border border-border bg-card p-6 rounded-2xl transition-all duration-300 hover:shadow-glow cursor-pointer">
+        <div className="border border-border bg-card p-6 rounded-2xl shadow-md transition-all duration-300 hover:shadow-glow cursor-pointer">
             <div className="flex items-center justify-between">
                 <p className="text-sm text-muted-foreground">{title}</p>
                 {Icon && <Icon className={`h-6 w-6 ${iconColor}`} />}   
