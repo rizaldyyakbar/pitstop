@@ -1,7 +1,7 @@
 🏎️ PitStop: Financial Maintenance Station
 "Stopping for a moment to fuel your future."
 
-PitStop adalah aplikasi manajemen cash flow personal yang dirancang untuk efisiensi tinggi dan otomatisasi. Layaknya sebuah pit stop dalam balapan rally, aplikasi ini berfungsi sebagai tempat monitoring kondisi keuangan secara cepat, akurat, dan otomatis, sehingga pengguna bisa kembali fokus pada tujuan finansial mereka.
+PitStop adalah aplikasi manajemen cash flow personal yang dirancang untuk efisiensi tinggi dan otomatisasi. Layaknya sebuah pit stop dalam sebuah ajang balapan , aplikasi ini berfungsi sebagai tempat monitoring kondisi keuangan secara cepat, akurat, dan otomatis, sehingga pengguna bisa kembali fokus pada tujuan finansial mereka.
 
 Aplikasi ini dibangun menggunakan arsitektur Decoupled (React JS & Laravel) untuk memastikan performa yang kencang dan skalabilitas yang baik.
 
