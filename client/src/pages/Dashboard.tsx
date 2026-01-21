@@ -3,6 +3,29 @@ import { ArrowUpIcon, ArrowDownIcon ,DollarSignIcon, ScanIcon } from "lucide-rea
 import ChartCard from "../components/ChartCard";
 
 export default function Dashboard() {
+    // Data keuangan bulan ini
+    const totalIncome = 100000;
+    const totalExpenses = 45000;
+    const totalRevenue = totalIncome - totalExpenses;
+
+    // Data bulan lalu (untuk perbandingan)
+    const lastMonthIncome = 95000;
+    const lastMonthExpenses = 46000;
+    const lastMonthRevenue = lastMonthIncome - lastMonthExpenses;
+
+    // Hitung trend otomatis
+    const calculateTrend = (current: number, previous: number) => {
+        const change = ((current - previous) / previous) * 100;
+        return {
+            percentage: `${change >= 0 ? '+' : ''}${change.toFixed(1)}%`,
+            color: change >= 0 ? 'green' as const : 'red' as const
+        };
+    };
+
+    const revenueTrend = calculateTrend(totalRevenue, lastMonthRevenue);
+    const incomeTrend = calculateTrend(totalIncome, lastMonthIncome);
+    const expensesTrend = calculateTrend(totalExpenses, lastMonthExpenses);
+
     return (
         <div className="min-h-screen bg-background text-foreground p-8">
             <div className="max-w-7xl mx-auto space-y-8">
@@ -22,27 +45,27 @@ export default function Dashboard() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <StatsCard
                         title="Total Revenue"
-                        value="$120,000"
-                        trend="+8.5%"
-                        trendColor="green"
+                        value={`$${totalRevenue.toLocaleString()}`}
+                        trend={revenueTrend.percentage}
+                        trendColor={revenueTrend.color}
                         icon={DollarSignIcon}
-                        iconColor="text-green-500"
+                        iconColor="text-primary"
                         periodInfo="from last month"
                     />  
                     <StatsCard
                         title="Total Income"
-                        value="$100,000"
-                        trend="+5.2%"
-                        trendColor="green"
+                        value={`$${totalIncome.toLocaleString()}`}
+                        trend={incomeTrend.percentage}
+                        trendColor={incomeTrend.color}
                         icon={ArrowDownIcon}
                         iconColor="text-green-500"
                         periodInfo="from last month"
                     />
                     <StatsCard
                         title="Total Expenses"
-                        value="$45,000"
-                        trend="-2.3%"
-                        trendColor="red"
+                        value={`$${totalExpenses.toLocaleString()}`}
+                        trend={expensesTrend.percentage}
+                        trendColor={expensesTrend.color}
                         icon={ArrowUpIcon}
                         iconColor="text-red-500"
                         periodInfo="from last month"
