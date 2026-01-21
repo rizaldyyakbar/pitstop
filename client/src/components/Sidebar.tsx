@@ -1,19 +1,13 @@
 import { Home, Receipt, Scan, BrainCircuit, Settings, LogOut, User } from "lucide-react";
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
-    const [active, setActive] = useState("home");
-
-    const handleSetActive = (section: string) => {
-        setActive(section);
-    }
-
     const menuItems = [
-        { name: "Home", icon: Home },
-        { name: "Transactions", icon: Receipt },
-        { name: "Scan", icon: Scan },
-        { name: "Analytics", icon: BrainCircuit },
-        { name: "Settings", icon: Settings },
+        { name: "Home", icon: Home, path: "/" },
+        { name: "Transactions", icon: Receipt, path: "/transactions" },
+        { name: "Scan", icon: Scan, path: "/scan" },
+        { name: "Analytics", icon: BrainCircuit, path: "/analytics" },
+        { name: "Settings", icon: Settings, path: "/settings" },
     ];
     return (
         <div className="h-screen w-64 bg-sidebar-foreground text-white flex flex-col justify-between">
@@ -21,17 +15,18 @@ export default function Sidebar() {
                 <h2 className="text-2xl font-bold mb-8">PitStop</h2>
                 <nav className="space-y-4">
                     {menuItems.map((item) => (
-                        <a
+                        <NavLink
                             key={item.name}
-                            href="#"
-                            className={`flex items-center gap-3 hover:text-secondary active:text-primary  ${
-                                active.toLowerCase() === item.name.toLowerCase() ? "text-primary font-semibold" : "text-white"
-                            }`}
-                            onClick={() => handleSetActive(item.name.toLowerCase())}
+                            to={item.path}
+                            className={({ isActive }) =>
+                                `flex items-center gap-3 hover:text-secondary transition-colors ${
+                                    isActive ? "text-primary font-semibold" : "text-white"
+                                }`
+                            }
                         >
                             <item.icon className="h-5 w-5" />
                             {item.name}
-                        </a>
+                        </NavLink>
                     ))}
                 </nav>
             </div>
